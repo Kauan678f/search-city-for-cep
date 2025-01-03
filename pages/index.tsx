@@ -1,5 +1,3 @@
-import './App.css'
-
 import { useEffect, useState } from "react"
 
 interface Dados {
@@ -20,7 +18,7 @@ export default function Home() {
 
   async function findCity(){
     // console.log(dados)
-    const url = `http://192.168.1.121:8686/cep/${cep}`
+    const url = `https://apicep.bacode.com.br/cep/${cep}`
     if(cep.length != 9){
       setDados(null);
       setErrorMessage("Digite o CEP corretamente, no formato XXXXX-XXX.");
